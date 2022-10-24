@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablas</title>
+</head>
+<style>
+    col:nth-child(1){
+        background-color: lightcoral;
+    }       
+
+    col:nth-child(2){
+        background-color: steelblue;
+    }
+ </style>
+<body>
+    <!-- 
+        las tablas es HTML sirven para mostrar contenido tabulado
+
+        la estructura basica de una tabla se compone de 
+        table -> etiqueta que encierra una tabla
+        tr-> table row, etiqueta que construye una fila
+        td ->table data, etiqueta que contruye una celda
+
+        truco : el numero de celdas dentro de un td establecera el numero de columnas de la tabala 
+
+        los titulos de las tablas se establecen con la etiqueta caption,
+        es una etiqueta opcional, y segun la especificacion esa etiqueta se coloca justo despues de la etiqueta table
+
+        las cabeceras de las tablas se establecen con la etiqueta thead
+
+        dentro tendremos una etiqueta tr normal, pero en el caso de las celdas, las estableceremops con la etiqueta th en lugar de td
+
+        el contenido de la tabla debe ir dentro de una etiqueta tbody para reprecentar el cuerpo de la tabla
+
+        de forma opcional podemos colorcar un tfoot a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidad o total
+
+        para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos:
+             rowspan: sirve para que una celda ocupe mas de una fila, el valor por defector es 1 
+             colsapan : sirve para que una celda ocupe mas de una columna, el valor por defecto es 1
+
+        cuando necesitamos seleccionar una columna , tenemos la etiqueta colgroup, que nos permite seleccionar una columna en correcto, dentro pondremos tantas etiquetas col como columna tengamos, cada etiqueta col quivaldra a una columna siguiendo el mismo orden que tiene en la tabla 
+
+        si necesitamos que una etiqueta col agrupe mas de una columna, tenemos el atributo span que funciona exactamente igual que rowspan y colspan
+
+     -->
+    
+
+     <table>
+        <caption>HORARIO DE CLASE</caption>
+        <colgroup>
+            <col span="5">  
+            <col>
+        </colgroup>
+         <thead>
+            <tr>
+                <th>HORA</th>
+                <th>l</th>
+                <th>m</th>
+                <th>x</th>
+                <th>j</th>
+                <th>v</th>
+            </tr>
+         </thead>
+         <tbody>
+           
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>matematica</td>
+                <td>matematica</td>
+                <td>sociales</td>
+                <td>fisica</td>
+                <td>quimica</td>
+            </tr>           
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>matematica</td>
+                <td>matematica</td>
+                <td>sociales</td>
+                <td>fisica</td>
+                <td>quimica</td>
+            </tr>
+            <tr>
+                <td>10:30 - 11:30</td>
+                <td colspan="5"> recreo</td>               
+            </tr>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td rowspan="2">tecnologia</td>
+                <td>matematica</td>
+                <td>sociales</td>
+                <td>fisica</td>
+                <td rowspan="2">tecnologia</td>
+            </tr>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <!-- tecnologia *2 -->
+                <td>matematica</td>
+                <td>sociales</td>
+                <td>fisica</td>
+                <!-- tecnologia *2 -->
+            </tr>
+         </tbody>
+         <tfoot>
+             <tr>
+                 <td colspan="5">tatal clases </td>
+                 <td>12 </td>
+             </tr>
+         </tfoot>
+        
+     </table>
+</body>
+</html>

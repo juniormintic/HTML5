@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section-article-aside</title>
+</head>
+<!-- 
+    section: es un contenedor generico que agrupa contenido que esta relacionado, cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section
+
+    article: es un contenedor que representa contenido independiente, es decir, podemos leer ese fragmento en cualquier otro sitio y tendria sentido por si mismo 
+
+    aside: se utiliza para representar contenido relacionado pero que no forma parte del contenido principal
+
+    anidamiento: 
+        un section puede contener articles, por ejemplo , si tenemos varios articulos que hablan sobre etiqutas HTML, debe ir dentro de un section, ya que es contenido relacionado entre si, y los article serian contenido independiente por que podriamos leer uno sin haber leido el resto y seguira teniendo sentido.
+
+        el article es definido como un componente de la pagina de contenido independiente, esto implica que esta etiqueta pueda tener un header y footer propios
+
+        tambien existen el caso en el que un article contenga varias secciones, el articulo  independiente podria ser navegadores y este contener dentro secciones como navegadores mas utilizados en 2020
+ -->
+
+<body>
+    <header>
+        <button><a href="index.html">Atras</a></button>
+        <h1>cursos de programacion</h1>
+    </header>
+    <!-- el aside es para temas relacionados al contenido como publicidad o cursos ej si la pagina trata del tema de programacion y el aside estara por fuera del main -->
+    <aside>cuso gratuito en youtube</aside>
+    <!-- ejemplo section y article -->
+    <header>
+        <h1>NOTICIAS NACIONAL</h1>
+    </header>
+    <main>
+
+        <section>
+            <h2>CONTENIDO DE SECCTION 1</h2>
+            <section>
+                <h3>noticias del dia</h3>
+                <article>
+                    <header>
+                        <h4>Noticia 1 </h4>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus incidunt laudantium corporis
+                        error quo explicabo molestiae adipisci voluptatibus repellat rem placeat porro blanditiis atque
+                        sit ducimus saepe, dolorem ipsa consequuntur! </p>
+                    <footer>ruta de noticia</footer>
+                </article>
+                <article>
+                    <header>
+                        <h4>Noticia 2 </h4>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus incidunt laudantium corporis
+                        error quo explicabo molestiae adipisci voluptatibus repellat rem placeat porro blanditiis atque
+                        sit ducimus saepe, dolorem ipsa consequuntur! </p>
+                    <footer>ruta de noticia</footer>
+                </article>
+            </section>
+        </section>
+        <br><br>
+
+
+        <!-- clase 2 en caso inverso  elemplo-->
+        <article>
+            <h2>Navegadores mas utilizados en 2021</h2>
+            <section>
+                <header>
+                    <h3>Chrome</h3>
+                </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla minima ipsa odit ipsam officia,
+                    perspiciatis ex recusandae eveniet provident numquam itaque voluptatum aspernatur dolore repellendus
+                    nihil placeat, delectus dolor vero?</p>
+                <footer>creado por chrome</footer>
+            </section>
+            <section>
+                <h3>firefox</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facilis illum ut commodi ab est
+                    debitis voluptatum numquam officiis amet doloribus eaque voluptatem esse reiciendis maxime suscipit
+                    possimus atque dolore!</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>
